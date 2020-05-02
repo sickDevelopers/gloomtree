@@ -1,1 +1,1 @@
-Gloomhave scenario tree for our campaign
+Gloomhaven scenario tree for our campaign
