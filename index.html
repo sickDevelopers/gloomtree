@@ -23,6 +23,15 @@
       .node circle.blocked {
         stroke: red;
       }
+      
+      .node circle.extra {
+       stroke: Goldenrod; 
+      }
+      
+      .node circle.extra-done {
+       stroke: Whitesmoke; 
+      }
+        
 
       .node text {
         font: 12px sans-serif;
@@ -46,6 +55,8 @@
         TRIED: "tried",
         BLOCKED: "blocked",
         TODO: "todo",
+	EXTRA: "extra",
+	EXTRA_DONE: "extra-done"
       };
 
       var treeData = [
@@ -57,7 +68,7 @@
 		  {
 			  name: "Biblioteca Arcana",
 			  parent: "Tumulo Nero",
-			  state: States.TODO
+			  state: States.EXTRA
 		  },
             {
               name: "Tana del Tumulo",
@@ -100,7 +111,7 @@
 			      {
 			  name: "Brughiera Tossica",
 			  parent: "Magazzino di Gloomhaven",
-			  state: States.TODO
+			  state: States.EXTRA
 		  }
                       ],
                     },
