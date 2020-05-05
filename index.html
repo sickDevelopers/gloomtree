@@ -2,195 +2,119 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-
     <title>Gloomtree</title>
 
-    <style>
-	    .color {
-				display: inline-block;
-				margin: 0 10px
-			}
-	    
-	    
-      .node {
-        cursor: pointer;
-      }
-
-      .node circle {
-        fill: #fff;
-        stroke: steelblue;
-        stroke-width: 3px;
-      }
-
-      .node circle.done {
-        stroke: green;
-      }
-
-      .node circle.blocked {
-        stroke: red;
-      }
-      
-      .node circle.extra {
-       stroke: Goldenrod; 
-      }
-      
-      .node circle.extra-done {
-       stroke: Whitesmoke; 
-      }
-        
-
-      .node text {
-        font: 12px sans-serif;
-      }
-
-      .link {
-        fill: none;
-        stroke: #ccc;
-        stroke-width: 2px;
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet" type="text/css"> 
   </head>
 
   <body>
-	  
-	  <fieldset>
-	  <legend>Legend</legend>
+    <fieldset>
+      <legend>Legend</legend>
 
-	  <div class="color">
-	    <svg height="20" width="20">
-	  <circle cx="10" cy="10" r="8" stroke="green" stroke-width="3" fill="white" />
-	</svg>
-	    Completati
-	  </div>
-	  <div class="color">
-	    <svg height="20" width="20">
-	  <circle cx="10" cy="10" r="8" stroke="steelblue" stroke-width="3" fill="white" />
-	</svg>
-	    Fattibili
-	  </div>
+      <div class="color">
+        <svg height="20" width="20">
+          <circle
+            cx="10"
+            cy="10"
+            r="8"
+            stroke="green"
+            stroke-width="3"
+            fill="white"
+          />
+        </svg>
+        Completati
+      </div>
+      <div class="color">
+        <svg height="20" width="20">
+          <circle
+            cx="10"
+            cy="10"
+            r="8"
+            stroke="steelblue"
+            stroke-width="3"
+            fill="white"
+          />
+        </svg>
+        Fattibili
+      </div>
 
-	  <div class="color">
-	    <svg height="20" width="20">
-	  <circle cx="10" cy="10" r="8" stroke="red" stroke-width="3" fill="white" />
-	</svg>
-	    Bloccati
-	  </div>
+      <div class="color">
+        <svg height="20" width="20">
+          <circle
+            cx="10"
+            cy="10"
+            r="8"
+            stroke="red"
+            stroke-width="3"
+            fill="white"
+          />
+        </svg>
+        Bloccati
+      </div>
 
-	  <div class="color">
-	    <svg height="20" width="20">
-	  <circle cx="10" cy="10" r="8" stroke="Goldenrod" stroke-width="3" fill="white" />
-	</svg>
-	    Casuali
-	  </div>
+      <div class="color">
+        <svg height="20" width="20">
+          <circle
+            cx="10"
+            cy="10"
+            r="8"
+            stroke="Goldenrod"
+            stroke-width="3"
+            fill="white"
+          />
+        </svg>
+        Casuali
+      </div>
 
-	  <div class="color">
-	    <svg height="20" width="20">
-	  <circle cx="10" cy="10" r="8" stroke="Whitesmoke" stroke-width="3" fill="white" />
-	</svg>
-	    Casuali completati
-	  </div>
+      <div class="color">
+        <svg height="20" width="20">
+          <circle
+            cx="10"
+            cy="10"
+            r="8"
+            stroke="Whitesmoke"
+            stroke-width="3"
+            fill="white"
+          />
+        </svg>
+        Casuali completati
+      </div>
+    </fieldset>
 
-	</fieldset>
-	  
-    <!-- load the d3.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <div id="tooltip">
+      <h3 id="name"></h3>
+      <p id="state"></p>
+
+      <h3>Tentativi: <span id="trials"></span></h3>
+
+      <div id="trials-box"></div>
+    </div>
 
     <script>
+      const Heroes = {
+        CRAGHEART: "Cuore di Roccia",
+        TINKERER: "Inventore",
+        BRUTE: "Bruto",
+        SPELLWEAVER: "Tessimagie",
+        MINDTHIEF: "Ladro Mentale",
+        SCOUNDREL: "Canaglia",
+      };
+
       const States = {
         DONE: "done",
         TRIED: "tried",
         BLOCKED: "blocked",
         TODO: "todo",
-	EXTRA: "extra",
-	EXTRA_DONE: "extra-done"
+        EXTRA: "extra",
+        EXTRA_DONE: "extra-done",
       };
+    </script>
 
-      var treeData = [
-        {
-          name: "Tumulo Nero",
-          parent: "null",
-          state: States.DONE,
-          children: [
-		  {
-			  name: "Biblioteca Arcana",
-			  parent: "Tumulo Nero",
-			  state: States.EXTRA
-		  },
-            {
-              name: "Tana del Tumulo",
-              parent: "Tumulo Nero",
-              state: States.DONE,
-              children: [
-                {
-                  name: "Accampamento Inox",
-                  parent: "Tana del tumulo",
-                  state: States.DONE,
-                  children: [
-                    {
-                      name: "Magazzino di Gloomhaven",
-                      parent: "Accampamento Inox",
-                      state: States.DONE,
-                      children: [
-                        {
-                          name: "Grotta Vibrante",
-                          parent: "Magazzino di Gloomhaven",
-                          state: States.TODO,
-                        },
-                        {
-                          name: "Tempio del veggente",
-                          parent: "Magazzino di Gloomhaven",
-                          state: States.DONE,
-                          children: [
-                            {
-                              name: "Isola Perduta",
-                              parent: "Tempio del veggente",
-                              state: States.TODO,
-                            },
-                          ],
-                        },
-			      
-                        {
-                          name: "Conca ghiacciata",
-                          parent: "Magazzino di Gloomhaven",
-                          state: States.DONE,
-                        },
-			      {
-			  name: "Brughiera Tossica",
-			  parent: "Magazzino di Gloomhaven",
-			  state: States.EXTRA
-		  }
-                      ],
-                    },
-                    {
-                      name: "Miniera di Diamanti",
-                      parent: "Accampamento Inox",
-                      state: States.BLOCKED,
-                    },
-                  ],
-                },
-                {
-                  name: "Cripta dei dannati",
-                  parent: "Tumulo Nero",
-                  state: States.DONE,
-                  children: [
-                    {
-                      name: "Cripta in rovina",
-                      parent: "Cripta dei dannati",
-                      state: States.TODO,
-                    },
-                    {
-                      name: "Cripta Marcescente",
-                      parent: "Cripta dei dannati",
-                      state: States.TODO,
-                    },
-                  ],
-                },
-              ],
-            },
-          ],
-        },
-      ];
+    <!-- load the d3.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="history.js"></script>
 
+    <script>
       // ************** Generate the tree diagram	 *****************
       var margin = { top: 20, right: 120, bottom: 20, left: 120 },
         width = 1200 - margin.right - margin.left,
@@ -249,17 +173,23 @@
 
         nodeEnter
           .append("circle")
-		  .attr("r", 1e-6)
+          .attr("r", 1e-6)
           .attr("class", function (d) {
             return d.state;
           })
+          .attr("data-scenario", (d) => {
+            const s = { ...d };
+            delete s.parent;
+            delete s.children;
+            return JSON.stringify(s);
+          })
           .style("fill", function (d) {
             return d._children ? "lightsteelblue" : "#fff";
-		  })
+          });
 
         nodeEnter
           .append("text")
-          .attr('x', -35)
+          .attr("x", -35)
           .attr("y", -15)
           //   .attr("x", function (d) {
           //     return d.children || d._children ? -13 : 13;
@@ -350,21 +280,48 @@
           d._children = null;
         }
         update(d);
-	  }
-	  
+      }
 
-	  document.body.addEventListener('mouseover', function(event) {
-		  if (event.target.matches('circle')) {
-			  console.log('mouseover')
-		  }
-	  })
+      const tooltipNode = document.querySelector("#tooltip");
+      const name = tooltipNode.querySelector("#name");
+      const state = tooltipNode.querySelector("#state");
+      const trials = tooltipNode.querySelector("#trials");
+      const trialsBox = tooltipNode.querySelector("#trials-box");
 
-	  document.body.addEventListener('mouseout', function(event) {
-		  if (event.target.matches('circle')) {
-			  console.log('mouseout')
-		  }
-	  })
+      document.body.addEventListener("mouseover", function (event) {
+        if (event.target.matches("circle")) {
+          const context = JSON.parse(
+            event.target.getAttribute("data-scenario")
+          );
+          console.log(context);
 
+          name.innerHTML = context.name;
+          state.innerHTML = context.state;
+
+          let trialBoxContent = "";
+
+          if (context.trials) {
+            context.trials.forEach((trial, index) => {
+              const team = `<p>${index + 1}. ${trial.date} <br> ${trial.team.toString()}</p>`;
+              trialBoxContent += team;
+            });
+          }  
+
+          trialsBox.innerHTML = trialBoxContent;
+
+          tooltipNode.style.top = event.clientY + 5  + "px";
+          tooltipNode.style.left = event.clientX + 5 + "px";
+          tooltipNode.style.display = "block";
+          console.log("mouseover");
+        }
+      });
+
+      document.body.addEventListener("mouseout", function (event) {
+        if (event.target.matches("circle")) {
+          tooltipNode.style.display = "none";
+          console.log("mouseout");
+        }
+      });
     </script>
   </body>
 </html>

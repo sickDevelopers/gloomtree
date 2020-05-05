@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.color {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 3px;
+}
+
+.node circle.done {
+  stroke: green;
+}
+
+.node circle.blocked {
+  stroke: red;
+}
+
+.node circle.extra {
+  stroke: Goldenrod;
+}
+
+.node circle.extra-done {
+  stroke: Whitesmoke;
+}
+
+.node text {
+  font: 12px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 2px;
+}
+
+#tooltip {
+  display: none;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  background: black;
+  color: white;
+  position: absolute;
+  font-size: 0.8em;
+  z-index: 1000;
+  padding: 10px;
+}
+
+#tooltip h3 {
+  margin-top: 0;
+}
