@@ -136,7 +136,7 @@ var treeData = [
                   ],
                   children: [
                     {
-                      name: "Piano del potere ...",
+                      name: "Piano del potere Elementale",
                       parent: "Cripta in rovina",
                       state: States.TODO,
                        trials: [],
