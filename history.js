@@ -127,7 +127,27 @@ var treeData = [
               {
                 name: "Cripta in rovina",
                 parent: "Cripta dei dannati",
-                state: States.TODO,
+                state: States.DONE,
+                trials: [
+                {
+                  team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                  date: '16.05.2020'
+                }
+                  ],
+                  children: [
+                    {
+                      name: "Piano del potere ...",
+                      parent: "Cripta in rovina",
+                      state: States.TODO,
+                       trials: [],
+                    },
+                    {
+                      name: "Cripta Dimenticata",
+                      parent: "Cripta in rovina",
+                      state: States.TODO,
+                       trials: [],
+                    },
+                  ]
               },
               {
                 name: "Cripta Marcescente",
