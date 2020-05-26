@@ -11,11 +11,11 @@ var treeData = [
           Heroes.MINDTHIEF,
           Heroes.SCOUNDREL,
         ],
-        date: '04.03.2020'
+        date: "04.03.2020",
       },
       {
         team: [Heroes.CRAGHEART, Heroes.TINKERER],
-        date: '12.03.2020'
+        date: "12.03.2020",
       },
     ],
     children: [
@@ -26,7 +26,7 @@ var treeData = [
         trials: [
           {
             team: [Heroes.SPELLWEAVER, Heroes.BRUTE],
-            date: '02.05.2020'
+            date: "02.05.2020",
           },
         ],
       },
@@ -37,7 +37,7 @@ var treeData = [
         trials: [
           {
             team: [Heroes.CRAGHEART, Heroes.TINKERER],
-            date: '18.03.2020'
+            date: "18.03.2020",
           },
         ],
         children: [
@@ -48,7 +48,7 @@ var treeData = [
             trials: [
               {
                 team: [Heroes.CRAGHEART, Heroes.TINKERER],
-                date: '25.03.2020'
+                date: "25.03.2020",
               },
             ],
             children: [
@@ -59,7 +59,7 @@ var treeData = [
                 trials: [
                   {
                     team: [Heroes.CRAGHEART, Heroes.TINKERER],
-                    date: '14.03.2020'
+                    date: "14.03.2020",
                   },
                 ],
                 children: [
@@ -67,18 +67,28 @@ var treeData = [
                     name: "Grotta Vibrante",
                     parent: "Magazzino di Gloomhaven",
                     state: States.TODO,
-                   
+                    trials: [
+                        {
+                            team: [
+                              Heroes.CRAGHEART,
+                              Heroes.BRUTE,
+                              Heroes.SPELLWEAVER,
+                              Heroes.SCOUNDREL,
+                            ],
+                            date: "25.05.2020"
+                          }
+                    ]
                   },
                   {
                     name: "Tempio del veggente",
                     parent: "Magazzino di Gloomhaven",
                     state: States.DONE,
                     trials: [
-                        {
-                          team: [Heroes.BRUTE, Heroes.MINDTHIEF],
-                          date: '23.04.2020'
-                        },
-                      ],
+                      {
+                        team: [Heroes.BRUTE, Heroes.MINDTHIEF],
+                        date: "23.04.2020",
+                      },
+                    ],
                     children: [
                       {
                         name: "Isola Perduta",
@@ -93,11 +103,11 @@ var treeData = [
                     parent: "Magazzino di Gloomhaven",
                     state: States.DONE,
                     trials: [
-                        {
-                          team: [Heroes.BRUTE, Heroes.MINDTHIEF],
-                          date: '12.04.2020'
-                        },
-                      ],
+                      {
+                        team: [Heroes.BRUTE, Heroes.MINDTHIEF],
+                        date: "12.04.2020",
+                      },
+                    ],
                   },
                   {
                     name: "Brughiera Tossica",
@@ -118,47 +128,57 @@ var treeData = [
             parent: "Tumulo Nero",
             state: States.DONE,
             trials: [
-                {
-                  team: [Heroes.BRUTE, Heroes.SCOUNDREL],
-                  date: '28.04.2020'
-                },
-              ],
+              {
+                team: [Heroes.BRUTE, Heroes.SCOUNDREL],
+                date: "28.04.2020",
+              },
+            ],
             children: [
               {
                 name: "Cripta in rovina",
                 parent: "Cripta dei dannati",
                 state: States.DONE,
                 trials: [
-                {
-                  team: [Heroes.TINKERER, Heroes.CRAGHEART],
-                  date: '16.05.2020'
-                }
-                  ],
-                  children: [
-                    {
-                      name: "Piano del potere Elementale",
-                      parent: "Cripta in rovina",
-                      state: States.TODO,
-                       trials: [],
-                    },
-                    {
-                      name: "Cripta Dimenticata",
-                      parent: "Cripta in rovina",
-                      state: States.TODO,
-                       trials: [],
-                    },
-                  ]
+                  {
+                    team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                    date: "16.05.2020",
+                  },
+                ],
+                children: [
+                  {
+                    name: "Piano del potere Elementale",
+                    parent: "Cripta in rovina",
+                    state: States.TODO,
+                    trials: [
+                      {
+                        team: [
+                          Heroes.CRAGHEART,
+                          Heroes.BRUTE,
+                          Heroes.SPELLWEAVER,
+                          Heroes.MINDTHIEF,
+                        ],
+                        date: "20.05.2020"
+                      }
+                    ],
+                  },
+                  {
+                    name: "Cripta Dimenticata",
+                    parent: "Cripta in rovina",
+                    state: States.TODO,
+                    trials: [],
+                  },
+                ],
               },
               {
                 name: "Cripta Marcescente",
                 parent: "Cripta dei dannati",
                 state: States.DONE,
-                 trials: [
-                {
-                  team: [Heroes.TINKERER, Heroes.CRAGHEART],
-                  date: '09.05.2020'
-                },
-              ],
+                trials: [
+                  {
+                    team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                    date: "09.05.2020",
+                  },
+                ],
               },
             ],
           },
