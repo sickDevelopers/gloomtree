@@ -37,7 +37,20 @@ var treeData = [
         trials: [
           {
             team: [Heroes.CRAGHEART, Heroes.TINKERER],
+            date: "13.03.2020",
+          },
+          {
+            team: [Heroes.CRAGHEART, Heroes.TINKERER],
+            date: "15.03.2020",
+          },
+          {
+            team: [Heroes.SPELLWEAVER, Heroes.SCOUNDREL],
             date: "18.03.2020",
+          },
+
+          {
+            team: [Heroes.CRAGHEART, Heroes.TINKERER],
+            date: "20.03.2020",
           },
         ],
         children: [
