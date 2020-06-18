@@ -125,7 +125,13 @@ var treeData = [
                   {
                     name: "Brughiera Tossica",
                     parent: "Magazzino di Gloomhaven",
-                    state: States.EXTRA,
+                    state: States.EXTRA_DONE,
+                    trials: [
+                      {
+                        team: [Heroes.CRAGHEART, Heroes.TINKERER],
+                        date: "18.06.2020",
+                      },
+                    ],
                   },
                 ],
               },
@@ -161,7 +167,7 @@ var treeData = [
                   {
                     name: "Piano del potere Elementale",
                     parent: "Cripta in rovina",
-                    state: States.TODO,
+                    state: States.DONE,
                     trials: [
                       {
                         team: [
@@ -171,6 +177,15 @@ var treeData = [
                           Heroes.MINDTHIEF,
                         ],
                         date: "20.05.2020"
+                      },
+                      {
+                        team: [
+                          Heroes.CRAGHEART,
+                          Heroes.SCOUNDREL,
+                          Heroes.SPELLWEAVER,
+                          Heroes.MINDTHIEF,
+                        ],
+                        date: "10.06.2020"
                       }
                     ],
                   },
