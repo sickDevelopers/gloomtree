@@ -188,6 +188,18 @@ var treeData = [
                         date: "10.06.2020"
                       }
                     ],
+                    children: [
+                      {
+                        name: "Tempio degli Elementi",
+                        parent: "Piano del potere Elementale",
+                        state: States.TODO,
+                      },
+                      {
+                        name: "Trono Infernale",
+                        parent: "Piano del potere Elementale",
+                        state: States.TODO,
+                      }
+                    ]
                   },
                   {
                     name: "Cripta Dimenticata",
