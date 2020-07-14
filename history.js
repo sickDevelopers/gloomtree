@@ -243,7 +243,10 @@ var treeData = [
                 state: States.DONE,
                 trials: [
                   {
-                    team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                    team: [
+                      Heroes.TINKERER, 
+                      Heroes.CRAGHEART
+                    ],
                     date: "09.05.2020",
                   },
                 ],
