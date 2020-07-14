@@ -208,17 +208,17 @@ var treeData = [
                           {
                             name: "Piano della notte",
                             parent: "Tempio degli elementi",
-                            state: State.TODO
+                            state: States.TODO
                           },
                           {
                             name: "Bastioni di Gloomhaven A",
                             parent: "Tempio degli elementi",
-                            state: State.TODO
+                            state: States.TODO
                           },
                           {
                             name: "Bastioni di Gloomhaven A",
                             parent: "Tempio degli elementi",
-                            state: State.TODO
+                            state: States.TODO
                           },
                         ]
                       },
