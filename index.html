@@ -295,7 +295,7 @@
           );
           console.log(context);
 
-          name.innerHTML = context.number ? context.number + context.name : context.name;
+          name.innerHTML = context.number ? `${context.number} - ${context.name}` : context.name;
           state.innerHTML = context.state;
 
           let trialBoxContent = "";
