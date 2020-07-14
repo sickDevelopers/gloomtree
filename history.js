@@ -192,7 +192,35 @@ var treeData = [
                       {
                         name: "Tempio degli Elementi",
                         parent: "Piano del potere Elementale",
-                        state: States.TODO,
+                        state: States.DONE,
+                        trials: [
+                          {
+                            team: [
+                              Heroes.CRAGHEART,
+                              Heroes.BRUTE,
+                              Heroes.SCOUNDREL,
+                              Heroes.MINDTHIEF
+                            ],
+                            date: "13.07.2020"
+                          }
+                        ],
+                        children: [
+                          {
+                            name: "Piano della notte",
+                            parent: "Tempio degli elementi",
+                            state: State.TODO
+                          },
+                          {
+                            name: "Bastioni di Gloomhaven A",
+                            parent: "Tempio degli elementi",
+                            state: State.TODO
+                          },
+                          {
+                            name: "Bastioni di Gloomhaven A",
+                            parent: "Tempio degli elementi",
+                            state: State.TODO
+                          },
+                        ]
                       },
                       {
                         name: "Trono Infernale",
