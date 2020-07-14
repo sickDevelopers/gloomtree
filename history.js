@@ -1,6 +1,7 @@
 var treeData = [
   {
     name: "Tumulo Nero",
+    number: 1,
     parent: "null",
     state: States.DONE,
     trials: [
@@ -21,6 +22,7 @@ var treeData = [
     children: [
       {
         name: "Biblioteca Arcana",
+        number: 67,
         parent: "Tumulo Nero",
         state: States.EXTRA,
         trials: [
@@ -32,6 +34,7 @@ var treeData = [
       },
       {
         name: "Tana del Tumulo",
+        number: 2,
         parent: "Tumulo Nero",
         state: States.DONE,
         trials: [
@@ -56,6 +59,7 @@ var treeData = [
         children: [
           {
             name: "Accampamento Inox",
+            number: 3,
             parent: "Tana del tumulo",
             state: States.DONE,
             trials: [
@@ -67,6 +71,7 @@ var treeData = [
             children: [
               {
                 name: "Magazzino di Gloomhaven",
+                number: 8,
                 parent: "Accampamento Inox",
                 state: States.DONE,
                 trials: [
@@ -78,6 +83,7 @@ var treeData = [
                 children: [
                   {
                     name: "Grotta Vibrante",
+                    number: 7,
                     parent: "Magazzino di Gloomhaven",
                     state: States.TODO,
                     trials: [
@@ -94,6 +100,7 @@ var treeData = [
                   },
                   {
                     name: "Tempio del veggente",
+                    number: 13,
                     parent: "Magazzino di Gloomhaven",
                     state: States.DONE,
                     trials: [
@@ -105,6 +112,7 @@ var treeData = [
                     children: [
                       {
                         name: "Isola Perduta",
+                        number: 17,
                         parent: "Tempio del veggente",
                         state: States.TODO,
                       },
@@ -113,6 +121,7 @@ var treeData = [
 
                   {
                     name: "Conca ghiacciata",
+                    number: 14,
                     parent: "Magazzino di Gloomhaven",
                     state: States.DONE,
                     trials: [
@@ -124,6 +133,7 @@ var treeData = [
                   },
                   {
                     name: "Brughiera Tossica",
+                    number: 68,
                     parent: "Magazzino di Gloomhaven",
                     state: States.EXTRA_DONE,
                     trials: [
@@ -137,6 +147,7 @@ var treeData = [
               },
               {
                 name: "Miniera di Diamanti",
+                number: 9,
                 parent: "Accampamento Inox",
                 state: States.BLOCKED,
               },
@@ -144,6 +155,7 @@ var treeData = [
           },
           {
             name: "Cripta dei dannati",
+            number: 4,
             parent: "Tumulo Nero",
             state: States.DONE,
             trials: [
@@ -155,6 +167,7 @@ var treeData = [
             children: [
               {
                 name: "Cripta in rovina",
+                number: 5,
                 parent: "Cripta dei dannati",
                 state: States.DONE,
                 trials: [
@@ -166,6 +179,7 @@ var treeData = [
                 children: [
                   {
                     name: "Piano del potere Elementale",
+                    number: 10,
                     parent: "Cripta in rovina",
                     state: States.DONE,
                     trials: [
@@ -191,6 +205,7 @@ var treeData = [
                     children: [
                       {
                         name: "Tempio degli Elementi",
+                        number: 22,
                         parent: "Piano del potere Elementale",
                         state: States.DONE,
                         trials: [
@@ -207,16 +222,19 @@ var treeData = [
                         children: [
                           {
                             name: "Piano della notte",
+                            number: 31,
                             parent: "Tempio degli elementi",
                             state: States.TODO
                           },
                           {
                             name: "Bastioni di Gloomhaven A",
+                            number: 35,
                             parent: "Tempio degli elementi",
                             state: States.TODO
                           },
                           {
-                            name: "Bastioni di Gloomhaven A",
+                            name: "Bastioni di Gloomhaven B",
+                            number: 36,
                             parent: "Tempio degli elementi",
                             state: States.TODO
                           },
@@ -231,6 +249,7 @@ var treeData = [
                   },
                   {
                     name: "Cripta Dimenticata",
+                    number: 19,
                     parent: "Cripta in rovina",
                     state: States.TODO,
                     trials: [],
@@ -239,6 +258,7 @@ var treeData = [
               },
               {
                 name: "Cripta Marcescente",
+                number: 6,
                 parent: "Cripta dei dannati",
                 state: States.DONE,
                 trials: [
