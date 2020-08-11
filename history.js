@@ -102,6 +102,7 @@ var treeData = [
                           Heroes.BRUTE,
                           Heroes.SPELLWEAVER,
                           Heroes.SCOUNDREL,
+                          Heroes.MINDTHIEF
                         ],
                         date: "22.07.2020",
                       },
