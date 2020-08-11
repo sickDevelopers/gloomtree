@@ -33,6 +33,14 @@ body {
   stroke: Whitesmoke;
 }
 
+.node circle.sidequest {
+  stroke: Orange;
+}
+
+.node circle.sidequest-done {
+  stroke: indianred;
+}
+
 .node text {
   font: 12px sans-serif;
 }

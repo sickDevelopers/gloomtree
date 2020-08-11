@@ -85,17 +85,38 @@ var treeData = [
                     name: "Grotta Vibrante",
                     number: 7,
                     parent: "Magazzino di Gloomhaven",
-                    state: States.TODO,
+                    state: States.DONE,
                     trials: [
-                        {
-                            team: [
-                              Heroes.CRAGHEART,
-                              Heroes.BRUTE,
-                              Heroes.SPELLWEAVER,
-                              Heroes.SCOUNDREL,
-                            ],
-                            date: "25.05.2020"
-                          }
+                      {
+                        team: [
+                          Heroes.CRAGHEART,
+                          Heroes.BRUTE,
+                          Heroes.SPELLWEAVER,
+                          Heroes.SCOUNDREL,
+                        ],
+                        date: "25.05.2020",
+                      },
+                      {
+                        team: [
+                          Heroes.CRAGHEART,
+                          Heroes.BRUTE,
+                          Heroes.SPELLWEAVER,
+                          Heroes.SCOUNDREL,
+                        ],
+                        date: "22.07.2020",
+                      },
+                      {
+                        team: [Heroes.CRAGHEART, Heroes.SPELLWEAVER],
+                        date: "04.08.2020",
+                      },
+                    ],
+                    children:[
+                      {
+                        name: "Rifugio della Negromante",
+                        number: 20,
+                        parent: "Grotta Vibrante",
+                        state: States.DONE
+                      }
                     ]
                   },
                   {
@@ -115,6 +136,17 @@ var treeData = [
                         number: 17,
                         parent: "Tempio del veggente",
                         state: States.TODO,
+                        trials: [
+                          {
+                            team: [
+                              Heroes.BRUTE,
+                              Heroes.MINDTHIEF,
+                              Heroes.CRAGHEART,
+                              Heroes.SCOUNDREL,
+                            ],
+                            date: "28.07.2020",
+                          },
+                        ],
                       },
                     ],
                   },
@@ -190,7 +222,7 @@ var treeData = [
                           Heroes.SPELLWEAVER,
                           Heroes.MINDTHIEF,
                         ],
-                        date: "20.05.2020"
+                        date: "20.05.2020",
                       },
                       {
                         team: [
@@ -199,8 +231,8 @@ var treeData = [
                           Heroes.SPELLWEAVER,
                           Heroes.MINDTHIEF,
                         ],
-                        date: "10.06.2020"
-                      }
+                        date: "10.06.2020",
+                      },
                     ],
                     children: [
                       {
@@ -214,45 +246,73 @@ var treeData = [
                               Heroes.CRAGHEART,
                               Heroes.BRUTE,
                               Heroes.SCOUNDREL,
-                              Heroes.MINDTHIEF
+                              Heroes.MINDTHIEF,
                             ],
-                            date: "13.07.2020"
-                          }
+                            date: "13.07.2020",
+                          },
                         ],
                         children: [
                           {
                             name: "Piano della notte",
                             number: 31,
                             parent: "Tempio degli elementi",
-                            state: States.TODO
+                            state: States.TODO,
                           },
                           {
                             name: "Bastioni di Gloomhaven A",
                             number: 35,
                             parent: "Tempio degli elementi",
-                            state: States.TODO
+                            state: States.TODO,
                           },
                           {
                             name: "Bastioni di Gloomhaven B",
                             number: 36,
                             parent: "Tempio degli elementi",
-                            state: States.TODO
+                            state: States.TODO,
                           },
-                        ]
+                        ],
                       },
                       {
                         name: "Trono Infernale",
                         parent: "Piano del potere Elementale",
                         state: States.TODO,
-                      }
-                    ]
+                      },
+                    ],
                   },
                   {
                     name: "Cripta Dimenticata",
                     number: 19,
                     parent: "Cripta in rovina",
-                    state: States.TODO,
-                    trials: [],
+                    state: States.DONE,
+                    trials: [
+                      {
+                        team: [
+                          Heroes.SCOUNDREL,
+                          Heroes.CRAGHEART,
+                          Heroes.MINDTHIEF,
+                          Heroes.SPELLWEAVER,
+                        ],
+                        date: "10.08.2020",
+                      },
+                      {
+                        team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                        date: "10.08.2020",
+                      },
+                    ],
+                    children: [
+                      {
+                        name: "Varco Rovinoso",
+                        number: 27,
+                        parent: "Cripta Dimenticata",
+                        state: States.TODO,
+                      },
+                      {
+                        name: "Faro Evanescente",
+                        number: 61,
+                        parent: "",
+                        state: States.SIDEQUEST
+                      }
+                    ]
                   },
                 ],
               },
@@ -263,10 +323,7 @@ var treeData = [
                 state: States.DONE,
                 trials: [
                   {
-                    team: [
-                      Heroes.TINKERER, 
-                      Heroes.CRAGHEART
-                    ],
+                    team: [Heroes.TINKERER, Heroes.CRAGHEART],
                     date: "09.05.2020",
                   },
                 ],
