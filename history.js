@@ -115,7 +115,7 @@ var treeData = [
                         name: "Rifugio della Negromante",
                         number: 20,
                         parent: "Grotta Vibrante",
-                        state: States.DONE
+                        state: States.TODO
                       }
                     ]
                   },
