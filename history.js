@@ -116,7 +116,17 @@ var treeData = [
                         name: "Rifugio della Negromante",
                         number: 20,
                         parent: "Grotta Vibrante",
-                        state: States.TODO
+                        state: States.TODO,
+                        trials: [
+                          {
+                           team: [
+                             Heroes.CRAGHEARTH, 
+                             Heroes.SCOUNDREL, 
+                             Heroes.SPELLWEAVER
+                           ],
+                            date: "11.08.2020"
+                          }
+                        ]
                       }
                     ]
                   },
