@@ -120,7 +120,7 @@ var treeData = [
                         trials: [
                           {
                            team: [
-                             Heroes.CRAGHEARTH, 
+                             Heroes.CRAGHEART, 
                              Heroes.SCOUNDREL, 
                              Heroes.SPELLWEAVER
                            ],
