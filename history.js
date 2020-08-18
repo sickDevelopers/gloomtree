@@ -102,7 +102,7 @@ var treeData = [
                           Heroes.BRUTE,
                           Heroes.SPELLWEAVER,
                           Heroes.SCOUNDREL,
-                          Heroes.MINDTHIEF
+                          Heroes.MINDTHIEF,
                         ],
                         date: "22.07.2020",
                       },
@@ -111,7 +111,7 @@ var treeData = [
                         date: "04.08.2020",
                       },
                     ],
-                    children:[
+                    children: [
                       {
                         name: "Rifugio della Negromante",
                         number: 20,
@@ -119,16 +119,16 @@ var treeData = [
                         state: States.TODO,
                         trials: [
                           {
-                           team: [
-                             Heroes.CRAGHEART, 
-                             Heroes.SCOUNDREL, 
-                             Heroes.SPELLWEAVER
-                           ],
-                            date: "11.08.2020"
-                          }
-                        ]
-                      }
-                    ]
+                            team: [
+                              Heroes.CRAGHEART,
+                              Heroes.SCOUNDREL,
+                              Heroes.SPELLWEAVER,
+                            ],
+                            date: "11.08.2020",
+                          },
+                        ],
+                      },
+                    ],
                   },
                   {
                     name: "Tempio del veggente",
@@ -322,30 +322,35 @@ var treeData = [
                         number: 61,
                         parent: "",
                         state: States.SIDEQUEST_DONE,
-                        trials: [{team: Heroes.TINKERER, Heroes.CRAGHEART, date: "11.08.2020"}]
+                        trials: [
+                          {
+                            team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                            date: "11.08.2020",
+                          },
+                        ],
                         children: [
                           {
-                           name: "Fossa delle Anime",
-                            number:62,
+                            name: "Fossa delle Anime",
+                            number: 62,
                             state: States.SIDEQUEST,
                             trials: [
                               {
-                               team: [Heroes.TINKERER, Heroes.SPELLWEAVER],
-                                date: "12.08.2020"
+                                team: [Heroes.TINKERER, Heroes.SPELLWEAVER],
+                                date: "12.08.2020",
                               },
-                      {
-                               team: [Heroes.TINKERER, Heroes.CRAGHEART],
-                                date: "18.08.2020"
+                              {
+                                team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                                date: "18.08.2020",
                               },
-                      {
-                               team: [Heroes.TINKERER, Heroes.CRAGHEART],
-                                date: "18.08.2020"
-                              }
-                              ]
-                          }
-                        ]
-                      }
-                    ]
+                              {
+                                team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                                date: "18.08.2020",
+                              },
+                            ],
+                          },
+                        ],
+                      },
+                    ],
                   },
                 ],
               },
