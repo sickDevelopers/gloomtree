@@ -321,7 +321,29 @@ var treeData = [
                         name: "Faro Evanescente",
                         number: 61,
                         parent: "",
-                        state: States.SIDEQUEST
+                        state: States.SIDEQUEST_DONE,
+                        trials: [{team: Heroes.TINKERER, Heroes.CRAGHEART, date: "11.08.2020"}]
+                        children: [
+                          {
+                           name: "Fossa delle Anime",
+                            number:62,
+                            state: States.SIDEQUEST,
+                            trials: [
+                              {
+                               team: [Heroes.TINKERER, Heroes.SPELLWEAVER],
+                                date: "12.08.2020"
+                              },
+                      {
+                               team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                                date: "18.08.2020"
+                              },
+                      {
+                               team: [Heroes.TINKERER, Heroes.CRAGHEART],
+                                date: "18.08.2020"
+                              }
+                              ]
+                          }
+                        ]
                       }
                     ]
                   },
