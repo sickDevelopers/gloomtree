@@ -332,7 +332,7 @@ var treeData = [
                           {
                             name: "Fossa delle Anime",
                             number: 62,
-                            state: States.SIDEQUEST,
+                            state: States.SIDEQUEST_DONE,
                             trials: [
                               {
                                 team: [Heroes.TINKERER, Heroes.SPELLWEAVER],
@@ -345,6 +345,14 @@ var treeData = [
                               {
                                 team: [Heroes.TINKERER, Heroes.CRAGHEART],
                                 date: "18.08.2020",
+                              },
+                              {
+                                team: [Heroes.TINKERER, Heroes.SCOUNDREL, Heroes.BRUTE, Heroes.SPELLWEAVER],
+                                date: "19.08.2020",
+                              },
+                              {
+                                team: [Heroes.TINKERER, Heroes.CRAGHEART, Heroes.MINDTHIEF],
+                                date: "20.08.2020",
                               },
                             ],
                           },
