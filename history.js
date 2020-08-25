@@ -136,6 +136,28 @@ var treeData = [
                             date: "24.08.2020"
                           }
                         ],
+                        children: [
+                          {
+                            name: "Passo di montagna",
+                            number: 16,
+                            state: States.TODO
+                          },
+                          {
+                            name: "Fognature Abbandonate",
+                            number: 18,
+                            state: States.TODO
+                          },
+                          {
+                            name: "Camera esterna del rituale",
+                            number: 28,
+                            state: States.TODO
+                          },
+                          {
+                            name: "Relitto Sommerso",
+                            number: 93,
+                            state: States.EXTRA
+                          }
+                        ]
                       },
                     ],
                   },
