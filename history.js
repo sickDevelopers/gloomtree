@@ -116,7 +116,7 @@ var treeData = [
                         name: "Rifugio della Negromante",
                         number: 20,
                         parent: "Grotta Vibrante",
-                        state: States.TODO,
+                        state: States.DONE,
                         trials: [
                           {
                             team: [
