@@ -126,6 +126,15 @@ var treeData = [
                             ],
                             date: "11.08.2020",
                           },
+                          {
+                            team: [
+                              Heroes.BRUTE,
+                              Heroes.MINDTHIEF,
+                              Heroes.SPELLWEAVER,
+                              Heroes.NIGHTSHROUD
+                            ],
+                            date: "24.08.2020"
+                          }
                         ],
                       },
                     ],
