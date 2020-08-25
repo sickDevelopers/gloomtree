@@ -118,6 +118,16 @@
       <div id="trials-box"></div>
     </div>
 
+
+    <div id="right-sidebar">
+      <p>Partite fatte: <span id="totalTrials"></span></p>
+      <p>Completati: <span id="done"></span></p>
+      <p>Fattibili: <span id="todo"></span></p>
+      <table id="total-hero-trials-table">
+
+      </table>
+    </div>
+
     <script>
       const Heroes = {
         CRAGHEART: "Cuore di Roccia",
@@ -146,6 +156,79 @@
     <script src="history.js"></script>
 
     <script>
+
+      function countTrials(root, match) {
+        if (!root.children || root.children.length === 0) {
+          return root.trials ? root.trials.length : 0
+        }
+        let partial = 0;
+        for (let i = 0; i < root.children.length; i++) {
+          partial += countTrials(root.children[i])
+        }
+        return root.trials.length + partial;
+      }
+
+      // result by ref
+      function countPerHero(root, result) {
+        if (!root.children || root.children.length === 0) {
+          return; // DONE
+        }
+        root.trials.forEach(trial => {
+          Object.values(Heroes).forEach(heroName => {
+            if (trial.team.includes(heroName)) {
+              if (!result[heroName]) {
+                result[heroName] = 0;
+              }
+              result[heroName] += 1;
+            }
+          })
+        })
+        for (let i = 0; i < root.children.length; i++) {
+          countPerHero(root.children[i], result);      
+        }
+      }
+
+      function countSomethingOnNodes(root, match) {
+        let partial = 0;
+        if (root.children) {
+          for (let i = 0; i < root.children.length; i++) {
+            partial += countSomethingOnNodes(root.children[i], match)
+          }
+        }
+        return match(root) ? partial + 1 : partial;
+      }
+
+      const totalTrials = countTrials(treeData[0]);
+      document.querySelector('#totalTrials').innerHTML = totalTrials;
+
+      const won = countSomethingOnNodes(treeData[0], (scenario) => scenario.state === States.DONE)
+      document.querySelector('#done').innerHTML = won;
+
+      const doable = countSomethingOnNodes(treeData[0], (scenario) => scenario.state === States.TODO)
+      document.querySelector('#todo').innerHTML = doable;
+
+
+      const totalHeroesTrials = {};
+      countPerHero(treeData[0], totalHeroesTrials);
+
+      const heroTrialsTable = document.querySelector('#total-hero-trials-table');
+      Object.keys(totalHeroesTrials).forEach((heroName, i) => {
+        const tr = document.createElement('tr');
+        
+        const nameTd = document.createElement('td');
+        nameTd.innerHTML = heroName;
+
+        const valTd = document.createElement('td')
+        valTd.innerHTML = totalHeroesTrials[heroName];
+
+        tr.appendChild(nameTd);
+        tr.appendChild(valTd);
+
+        heroTrialsTable.appendChild(tr);
+
+      })
+
+
       // ************** Generate the tree diagram	 *****************
       var margin = { top: 20, right: 120, bottom: 20, left: 120 },
         width = 1200 - margin.right - margin.left,
@@ -324,7 +407,7 @@
           const context = JSON.parse(
             event.target.getAttribute("data-scenario")
           );
-          console.log(context);
+          // console.log(context);
 
           name.innerHTML = context.number ? `${context.number} - ${context.name}` : context.name;
           state.innerHTML = context.state;
@@ -343,16 +426,20 @@
           tooltipNode.style.top = event.clientY + 5  + "px";
           tooltipNode.style.left = event.clientX + 5 + "px";
           tooltipNode.style.display = "block";
-          console.log("mouseover");
+          // console.log("mouseover");
         }
       });
 
       document.body.addEventListener("mouseout", function (event) {
         if (event.target.matches("circle")) {
           tooltipNode.style.display = "none";
-          console.log("mouseout");
+          // console.log("mouseout");
         }
       });
     </script>
+
+    
+
+
   </body>
 </html>

@@ -67,3 +67,16 @@ body {
 #tooltip h3 {
   margin-top: 0;
 }
+
+#right-sidebar {
+  position: absolute;
+  right: 0;
+  top:80px;
+  display: block;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  height: 300px;
+  width: 200px;
+
+}
