@@ -181,8 +181,11 @@
             }
           })
         })
-        for (let i = 0; i < root.children.length; i++) {
-          countPerHero(root.children[i], result);      
+        
+        if (root.children) {
+          for (let i = 0; i < root.children.length; i++) {
+            countPerHero(root.children[i], result);      
+          }
         }
       }
 
