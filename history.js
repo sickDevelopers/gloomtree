@@ -145,7 +145,13 @@ var treeData = [
                           {
                             name: "Fognature Abbandonate",
                             number: 18,
-                            state: States.TODO
+                            state: States.TODO,
+                            trials: [
+                              {
+                                team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
+                                date: "28.08.200"
+                              }
+                            ]
                           },
                           {
                             name: "Camera esterna del rituale",
@@ -155,7 +161,8 @@ var treeData = [
                           {
                             name: "Relitto Sommerso",
                             number: 93,
-                            state: States.EXTRA
+                            state: States.EXTRA_DONE,
+                            trials: [{team: [Heroes.CRAGHEART, Heroes.NIGHTSHROUD], date: "26.08.2020"}]
                           }
                         ]
                       },
