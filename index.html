@@ -170,17 +170,18 @@
 
       // result by ref
       function countPerHero(root, result) {
-        
-        root.trials.forEach(trial => {
-          Object.values(Heroes).forEach(heroName => {
-            if (trial.team.includes(heroName)) {
-              if (!result[heroName]) {
-                result[heroName] = 0;
+        if(root.trials) {
+          root.trials.forEach(trial => {
+            Object.values(Heroes).forEach(heroName => {
+              if (trial.team.includes(heroName)) {
+                if (!result[heroName]) {
+                  result[heroName] = 0;
+                }
+                result[heroName] += 1;
               }
-              result[heroName] += 1;
-            }
+            })
           })
-        })
+        }
         
         if (root.children) {
           for (let i = 0; i < root.children.length; i++) {
