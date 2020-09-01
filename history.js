@@ -140,7 +140,30 @@ var treeData = [
                           {
                             name: "Passo di montagna",
                             number: 16,
-                            state: States.TODO
+                            state: States.DONE,
+                            trials: [
+                              {
+                                team: [
+                                  Heroes.CRAGHEART,
+                                  Heroes.SPELLWEAVER,
+                                  Heroes.MINDTHIEF,
+                                  Heroes.SCOUNDREL
+                                ], 
+                                date: "31.08.2020"
+                              }
+                            ],
+                            children: [
+                              {
+                                name: "Camera dell'Eco",
+                                number: 24,
+                                state: States.TODO
+                              },
+                              {
+                                name: "Valico di Rupegelida",
+                                number: 25,
+                                state: States.TODO
+                              }
+                            ]
                           },
                           {
                             name: "Fognature Abbandonate",
