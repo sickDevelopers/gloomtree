@@ -168,11 +168,28 @@ var treeData = [
                           {
                             name: "Fognature Abbandonate",
                             number: 18,
-                            state: States.TODO,
+                            state: States.DONE,
                             trials: [
                               {
                                 team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
-                                date: "28.08.200"
+                                date: "28.08.2020"
+                              },
+                              {
+                                team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
+                                date: "03.09.2020"
+                              }
+                            ],
+                            children: [
+                              {
+                                name: "Rovine Profonde",
+                                number: 23,
+                                state: States.DONE,
+                                trials: [
+                                  {
+                                    team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
+                                    date: "06.09.2020"
+                                  },
+                                ]
                               }
                             ]
                           },
