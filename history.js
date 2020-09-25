@@ -161,7 +161,43 @@ var treeData = [
                               {
                                 name: "Valico di Rupegelida",
                                 number: 25,
-                                state: States.TODO
+                                state: States.DONE,
+                                trials: [
+                                  {
+                                    team: [
+                                      Heroes.NIGHTSHROUD,
+                                      Heroes.SPELLWEAVER,
+                                      Heroes.MINDTHIEF,
+                                      Heroes.SCOUNDREL,
+                                      Heroes.BRUTE
+                                    ],
+                                    date: "07.09.2020"
+                                  }
+                                ],
+                                children: [
+                                  {
+                                    name: "Armeria Savvas",
+                                    number: 33,
+                                    state: States.TODO,
+                                    trials: [
+                                      {
+                                        team: [
+                                          Heroes.NIGHTSHROUD,
+                                          Heroes.SPELLWEAVER,
+                                          Heroes.MINDTHIEF,
+                                          Heroes.SCOUNDREL,
+                                          Heroes.BRUTE
+                                        ],
+                                        date: "14.09.2020"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    name: "Cima Rovente",
+                                    number: 34,
+                                    state: States.TODO
+                                  }
+                                ]
                               }
                             ]
                           },
@@ -362,7 +398,26 @@ var treeData = [
                             name: "Bastioni di Gloomhaven A",
                             number: 35,
                             parent: "Tempio degli elementi",
-                            state: States.TODO,
+                            state: States.DONE,
+                            trials: [
+                              {
+                                team: [
+                                  Heroes.NIGHTSHROUD,
+                                  Heroes.SPELLWEAVER,
+                                  Heroes.BRUTE,
+                                  Heroes.SCOUNDREL,
+                                  Heroes.MINDTHIEF,
+                                ],
+                                date: "24.09.2020"
+                              }
+                            ], 
+                            children: [
+                              {
+                                name: "Palude dei Ribelli",
+                                number: 45,
+                                state: States.TODO
+                              }
+                            ]
                           },
                           {
                             name: "Bastioni di Gloomhaven B",
