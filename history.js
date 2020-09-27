@@ -423,7 +423,7 @@ var treeData = [
                             name: "Bastioni di Gloomhaven B",
                             number: 36,
                             parent: "Tempio degli elementi",
-                            state: States.TODO,
+                            state: States.BLOCKED,
                           },
                         ],
                       },
