@@ -236,7 +236,13 @@ var treeData = [
                               {
                                name: "Nido dei drachi",
                                 number: 43,
-                                state: States.TODO
+                                state: States.DONE,
+                                trials: [
+                                  {
+                                    team: [Heroes.NIGHTSHROUD, Heroes.BRUTE, Heroes.SPELLWEAVER],
+                                    date: "29.09.2020"
+                                  },
+                                ]
                               }
                             ]
                           },
