@@ -267,6 +267,13 @@ var treeData = [
                                     team: [Heroes.NIGHTSHROUD, Heroes.BRUTE, Heroes.SPELLWEAVER],
                                     date: "29.09.2020"
                                   },
+                                ],
+                                children: [
+                                  {
+                                    name: "Montagna Bruciante",
+                                    number: 82,
+                                    state: States.EXTRA
+                                  }
                                 ]
                               }
                             ]
