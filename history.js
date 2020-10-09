@@ -131,10 +131,10 @@ var treeData = [
                               Heroes.BRUTE,
                               Heroes.MINDTHIEF,
                               Heroes.SPELLWEAVER,
-                              Heroes.NIGHTSHROUD
+                              Heroes.NIGHTSHROUD,
                             ],
-                            date: "24.08.2020"
-                          }
+                            date: "24.08.2020",
+                          },
                         ],
                         children: [
                           {
@@ -147,16 +147,16 @@ var treeData = [
                                   Heroes.CRAGHEART,
                                   Heroes.SPELLWEAVER,
                                   Heroes.MINDTHIEF,
-                                  Heroes.SCOUNDREL
-                                ], 
-                                date: "31.08.2020"
-                              }
+                                  Heroes.SCOUNDREL,
+                                ],
+                                date: "31.08.2020",
+                              },
                             ],
                             children: [
                               {
                                 name: "Camera dell'Eco",
                                 number: 24,
-                                state: States.TODO
+                                state: States.TODO,
                               },
                               {
                                 name: "Valico di Rupegelida",
@@ -169,10 +169,10 @@ var treeData = [
                                       Heroes.SPELLWEAVER,
                                       Heroes.MINDTHIEF,
                                       Heroes.SCOUNDREL,
-                                      Heroes.BRUTE
+                                      Heroes.BRUTE,
                                     ],
-                                    date: "07.09.2020"
-                                  }
+                                    date: "07.09.2020",
+                                  },
                                 ],
                                 children: [
                                   {
@@ -186,20 +186,20 @@ var treeData = [
                                           Heroes.SPELLWEAVER,
                                           Heroes.MINDTHIEF,
                                           Heroes.SCOUNDREL,
-                                          Heroes.BRUTE
+                                          Heroes.BRUTE,
                                         ],
-                                        date: "14.09.2020"
-                                      }
-                                    ]
+                                        date: "14.09.2020",
+                                      },
+                                    ],
                                   },
                                   {
                                     name: "Cima Rovente",
                                     number: 34,
-                                    state: States.TODO
-                                  }
-                                ]
-                              }
-                            ]
+                                    state: States.TODO,
+                                  },
+                                ],
+                              },
+                            ],
                           },
                           {
                             name: "Fognature Abbandonate",
@@ -208,12 +208,12 @@ var treeData = [
                             trials: [
                               {
                                 team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
-                                date: "28.08.2020"
+                                date: "28.08.2020",
                               },
                               {
                                 team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
-                                date: "03.09.2020"
-                              }
+                                date: "03.09.2020",
+                              },
                             ],
                             children: [
                               {
@@ -222,20 +222,28 @@ var treeData = [
                                 state: States.DONE,
                                 trials: [
                                   {
-                                    team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
-                                    date: "06.09.2020"
+                                    team: [
+                                      Heroes.NIGHTSHROUD,
+                                      Heroes.CRAGHEART,
+                                    ],
+                                    date: "06.09.2020",
                                   },
-                                ]
+                                ],
                               },
                               {
-                               name: "Antica Cisterna",
+                                name: "Antica Cisterna",
                                 number: 26,
                                 state: States.DONE,
                                 trials: [
                                   {
-                                    team: [Heroes.CRAGHEART, Heroes.MINDTHIEF, Heroes.SCOUNDREL, Heroes.SPELLWEAVER],
-                                    date: "01.10.2020"
-                                  }
+                                    team: [
+                                      Heroes.CRAGHEART,
+                                      Heroes.MINDTHIEF,
+                                      Heroes.SCOUNDREL,
+                                      Heroes.SPELLWEAVER,
+                                    ],
+                                    date: "01.10.2020",
+                                  },
                                 ],
                                 children: [
                                   {
@@ -244,52 +252,64 @@ var treeData = [
                                     state: States.SIDEQUEST_DONE,
                                     trials: [
                                       {
-                                        team: [Heroes.NIGHTSHROUD, Heroes.CRAGHEART],
-                                        date: "06.10.2020"
-                                      }
+                                        team: [
+                                          Heroes.NIGHTSHROUD,
+                                          Heroes.CRAGHEART,
+                                        ],
+                                        date: "06.10.2020",
+                                      },
                                     ],
                                     children: [
                                       {
                                         name: "Baracca Cremisi",
                                         number: 58,
-                                        state: States.SIDEQUEST
-                                      }
-                                    ]
-                                  }
-                                 ]
+                                        state: States.SIDEQUEST,
+                                      },
+                                    ],
+                                  },
+                                ],
                               },
                               {
-                               name: "Nido dei drachi",
+                                name: "Nido dei drachi",
                                 number: 43,
                                 state: States.DONE,
                                 trials: [
                                   {
-                                    team: [Heroes.NIGHTSHROUD, Heroes.BRUTE, Heroes.SPELLWEAVER],
-                                    date: "29.09.2020"
+                                    team: [
+                                      Heroes.NIGHTSHROUD,
+                                      Heroes.BRUTE,
+                                      Heroes.SPELLWEAVER,
+                                    ],
+                                    date: "29.09.2020",
                                   },
                                 ],
                                 children: [
                                   {
                                     name: "Montagna Bruciante",
                                     number: 82,
-                                    state: States.EXTRA
-                                  }
-                                ]
-                              }
-                            ]
+                                    state: States.EXTRA,
+                                  },
+                                ],
+                              },
+                            ],
                           },
                           {
                             name: "Camera esterna del rituale",
                             number: 28,
-                            state: States.TODO
+                            state: States.TODO,
                           },
                           {
                             name: "Relitto Sommerso",
                             number: 93,
                             state: States.EXTRA_DONE,
-                            trials: [{team: [Heroes.CRAGHEART, Heroes.NIGHTSHROUD], date: "26.08.2020"}]
-                          }
-                        ]
+                            trials: [
+                              {
+                                team: [Heroes.CRAGHEART, Heroes.NIGHTSHROUD],
+                                date: "26.08.2020",
+                              },
+                            ],
+                          },
+                        ],
                       },
                     ],
                   },
@@ -446,16 +466,40 @@ var treeData = [
                                   Heroes.SCOUNDREL,
                                   Heroes.MINDTHIEF,
                                 ],
-                                date: "24.09.2020"
-                              }
-                            ], 
+                                date: "24.09.2020",
+                              },
+                            ],
                             children: [
                               {
                                 name: "Palude dei Ribelli",
                                 number: 45,
-                                state: States.TODO
-                              }
-                            ]
+                                state: States.DONE,
+                                trials: [
+                                  {
+                                    team: [
+                                      Heroes.NIGHTSHROUD,
+                                      Heroes.SPELLWEAVER,
+                                      Heroes.BRUTE,
+                                      Heroes.SCOUNDREL,
+                                      Heroes.MINDTHIEF
+                                    ],
+                                    date: "08.10.2020"
+                                  }
+                                ],
+                                children: [
+                                  {
+                                    name: "Avamposto dei ribelli",
+                                    number: 49,
+                                    state: States.TODO
+                                  },
+                                  {
+                                    name: "Fortezza Fantasma",
+                                    number: 50,
+                                    state: States.TODO
+                                  }
+                                ]
+                              },
+                            ],
                           },
                           {
                             name: "Bastioni di Gloomhaven B",
@@ -529,11 +573,20 @@ var treeData = [
                                 date: "18.08.2020",
                               },
                               {
-                                team: [Heroes.TINKERER, Heroes.SCOUNDREL, Heroes.BRUTE, Heroes.SPELLWEAVER],
+                                team: [
+                                  Heroes.TINKERER,
+                                  Heroes.SCOUNDREL,
+                                  Heroes.BRUTE,
+                                  Heroes.SPELLWEAVER,
+                                ],
                                 date: "19.08.2020",
                               },
                               {
-                                team: [Heroes.TINKERER, Heroes.CRAGHEART, Heroes.MINDTHIEF],
+                                team: [
+                                  Heroes.TINKERER,
+                                  Heroes.CRAGHEART,
+                                  Heroes.MINDTHIEF,
+                                ],
                                 date: "20.08.2020",
                               },
                             ],

@@ -209,9 +209,22 @@
       const doable = countSomethingOnNodes(treeData[0], (scenario) => scenario.state === States.TODO)
       document.querySelector('#todo').innerHTML = doable;
 
-
       const totalHeroesTrials = {};
       countPerHero(treeData[0], totalHeroesTrials);
+
+      const totalWonPerHero = Object.keys(Heroes).reduce((total, heroKey) => {
+        const isWonByThisHero = (node) => {
+          if (node.trials && node.trials.length > 0) {
+            return node.trials.slice(-1)[0].team.includes(Heroes[heroKey])
+          }
+          return false
+          
+        }
+        const w = countSomethingOnNodes(treeData[0], isWonByThisHero);
+        total[Heroes[heroKey]] = w;
+        return total;
+      }, {})
+
 
       const heroTrialsTable = document.querySelector('#total-hero-trials-table');
       Object.keys(totalHeroesTrials).forEach((heroName, i) => {
@@ -221,7 +234,7 @@
         nameTd.innerHTML = heroName;
 
         const valTd = document.createElement('td')
-        valTd.innerHTML = totalHeroesTrials[heroName];
+        valTd.innerHTML = totalHeroesTrials[heroName] + ' (' + totalWonPerHero[heroName] + ' vinte)';
 
         tr.appendChild(nameTd);
         tr.appendChild(valTd);
