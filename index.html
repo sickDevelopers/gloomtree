@@ -215,7 +215,7 @@
       const totalWonPerHero = Object.keys(Heroes).reduce((total, heroKey) => {
         const isWonByThisHero = (node) => {
           if (node.trials && node.trials.length > 0) {
-            return node.trials.slice(-1)[0].team.includes(Heroes[heroKey])
+            return node.state === States.DONE && node.trials.slice(-1)[0].team.includes(Heroes[heroKey])
           }
           return false
           
