@@ -156,7 +156,55 @@ var treeData = [
                               {
                                 name: "Camera dell'Eco",
                                 number: 24,
-                                state: States.TODO,
+                                state: States.DONE,
+                                trials: [
+                                  {
+                                    team: [
+                                      Heroes.NIGHTSHROUD,
+                                      Heroes.SPELLWEAVER,
+                                      Heroes.MINDTHIEF,
+                                      Heroes.BRUTE,
+                                    ],
+                                    date: "23.10.2020"
+                                  }
+                                ],
+                                children: [
+                                  {
+                                    name: "Fossa di magma",
+                                    number: 63,
+                                    state: States.EXTRA
+                                  },
+                                  {
+                                    name: "Santuiario delle profonmdità",
+                                    number: 30,
+                                    state: States.TODO,
+                                    trials: []
+                                  },
+                                  {
+                                    name: "Bosco decrepito",
+                                    number: 32,
+                                    state: States.DONE,
+                                    trials: [
+                                      {
+                                        team: [
+                                          Heroes.NIGHTSHROUD,
+                                          Heroes.SPELLWEAVER,
+                                          Heroes.MINDTHIEF,
+                                          Heroes.SCOUNDREL,
+                                          Heroes.BRUTE,
+                                        ],
+                                        date: "28.10.2020"
+                                      }
+                                    ],
+                                    children: [
+                                      {
+                                        name: "Rete di Antiche Difese",
+                                        number: 40,
+                                        state: States.TODO
+                                      }
+                                    ]
+                                  }
+                                ]
                               },
                               {
                                 name: "Valico di Rupegelida",
@@ -490,7 +538,27 @@ var treeData = [
                                   {
                                     name: "Avamposto dei ribelli",
                                     number: 49,
-                                    state: States.TODO
+                                    state: States.DONE,
+                                    trials: [
+                                      {
+                                        team: [
+                                          Heroes.NIGHTSHROUD,
+                                          Heroes.SPELLWEAVER,
+                                          Heroes.BRUTE,
+                                          Heroes.SCOUNDREL,
+                                          Heroes.MINDTHIEF
+                                        ],
+                                        date: "15.10.2020"
+                                      }
+                                    ],
+                                    children: [
+                                      {
+                                        name: "Miniera sulfurea",
+                                        number: 65,
+                                        state: States.EXTRA,
+                                        trials: []
+                                      }
+                                    ]
                                   },
                                   {
                                     name: "Fortezza Fantasma",
