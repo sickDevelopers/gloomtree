@@ -172,7 +172,25 @@ var treeData = [
                                   {
                                     name: "Fossa di magma",
                                     number: 63,
-                                    state: States.EXTRA
+                                    state: States.EXTRA_DONE,
+                                    trials: [
+                                      {
+                                        team: [
+                                          Heroes.NIGHTSHROUD,
+                                          Heroes.SPELLWEAVER,
+                                          Heroes.MINDTHIEF,
+                                          Heroes.SCOUNDREL,
+                                        ],
+                                        date: "04.11.2020"
+                                      }
+                                    ],
+                                    children: [
+                                      {
+                                        name: "Pozzo degli sventurati",
+                                        number: "69",
+                                        state: States.EXTRA
+                                      } 
+                                    ]
                                   },
                                   {
                                     name: "Santuiario delle profonmdità",
@@ -344,7 +362,26 @@ var treeData = [
                           {
                             name: "Camera esterna del rituale",
                             number: 28,
-                            state: States.TODO,
+                            state: States.DONE,
+                            trials: [
+                              {
+                                team: [
+                                  Heroes.NIGHTSHROUD,
+                                  Heroes.BRUTE,
+                                  Heroes.SPELLWEAVER,
+                                  Heroes.SCOUNDREL,
+                                  Heroes.SPELLWEAVER
+                                ],
+                                date: "02.11.2020"
+                              }
+                            ],
+                            children: [
+                              {
+                                name: "Santuario dell'Oscurità",
+                                number: 29,
+                                state: States.TODO
+                              }
+                            ]
                           },
                           {
                             name: "Relitto Sommerso",
