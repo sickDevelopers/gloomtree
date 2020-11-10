@@ -44,7 +44,7 @@ var treeData = [
           {
             name: "Boshetto dele Melme",
             state: States.EXTRA,
-            numner: 72
+            number: 72
           }
         ]
       },
