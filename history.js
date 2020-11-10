@@ -30,7 +30,23 @@ var treeData = [
             team: [Heroes.SPELLWEAVER, Heroes.BRUTE],
             date: "02.05.2020",
           },
+          {
+            team: [Heroes.SPELLWEAVER, Heroes.NIGHTSHROUD, Heroes.BRUTE],
+            date: "10.11.2020"
+          }
         ],
+        children: [
+          {
+            name: "Boschetto Dimenticato",
+            state: States.SIDEQUEST,
+            number: 59
+          },
+          {
+            name: "Boshetto dele Melme",
+            state: States.EXTRA,
+            numner: 72
+          }
+        ]
       },
       {
         name: "Tana del Tumulo",
